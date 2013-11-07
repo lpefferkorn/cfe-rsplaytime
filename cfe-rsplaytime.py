@@ -28,7 +28,7 @@ def StringHash(s, seed, max):
   h ^= np.uint32(h >> 11)
   h += np.uint32(h << 15)
   
-  return np.uint32(h & (max - 1));
+  return np.uint32(h & (max - 1))
 
 if __name__ == "__main__":
 
