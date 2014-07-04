@@ -28,6 +28,13 @@ Usage
     $ ./cfe-rsplaytime.py 1 debian70.boring 192.168.2.110 0
     Runtime splaytime is 45.55s
 
+Support
+=======
+
+The computed splaytime is valid for the following CFEngine versions:
+  * 3.4.x
+  * 3.5.x
+  * 3.6.0
 
 Contact
 =======
