@@ -9,6 +9,8 @@ PROJECT_AUTHOR   = "Loic Pefferkorn <loic-cfengine@loicp.eu>"
 PROJECT_URI      = "http://www.github.com/lpefferkorn/cfe-rsplaytime"
 PROJECT_VERSION  = 1.0
 
+# CFEngine implementation lies in GetSplay() function
+
 # Overflows are expected to mimic c overflow behavior
 # in the StringHash() function,
 # because I don't want automatic int to long promotion
