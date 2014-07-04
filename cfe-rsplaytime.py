@@ -27,14 +27,14 @@ def StringHash(s, seed, max):
   h += np.uint32(h << 3)
   h ^= np.uint32(h >> 11)
   h += np.uint32(h << 15)
-  
+
   return np.uint32(h & (max - 1))
 
 if __name__ == "__main__":
 
   if (len(sys.argv) < 5):
     print 'cfe-rsplaytime.py v%.1f - Compute CFEngine runtime splaytime of a given host' \
-    %  PROJECT_VERSION 
+    %  PROJECT_VERSION
     print 'Usage %s: <splaytime> <fqdn> <ip> <uid>' % sys.argv[0]
     print """Arguments are:
       \tsplaytime: the value defined in body executor control
@@ -47,5 +47,5 @@ if __name__ == "__main__":
 
   else:
     hashStr = '{0}+{1}+{2}'.format(sys.argv[2], sys.argv[3], sys.argv[4])
-    runSplaytime = int(sys.argv[1]) * 60 * StringHash(hashStr, 0, CF_HASHTABLESIZE) / float(CF_HASHTABLESIZE ) 
+    runSplaytime = int(sys.argv[1]) * 60 * StringHash(hashStr, 0, CF_HASHTABLESIZE) / float(CF_HASHTABLESIZE )
     print "Runtime splaytime is %.2fs" % runSplaytime
